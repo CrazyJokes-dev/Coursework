@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>8 Favorite Pictures</title>
+<meta charset="utf-8">
+<style>
+body { font-family: Verdana, Arial, sans-serif;
+	   margin: 0; }
+	   
+header { text-align: center;
+		 background-color: #d5e1df; }
+
+/* Grid Areas */
+
+header { grid-area: header; }
+nav { grid-area: nav;}
+main { grid-area: main;
+		width: 100%; }
+aside { grid-area: aside; }
+footer { grid-area: footer; }
+#wrapper { display: grid;
+		   grid-template:
+				"header"
+				"nav"
+				"main"
+				"footer"
+				/auto }
+
+/* End of normal Grid Area */
+
+#navPic { display: none; }
+
+nav { font-size: 140%;
+	  background-color: #86af49;
+	  font-weight: bold; }
+
+nav ul { list-style-type: none;
+			 display: flex; 
+			 flex-direction: row; 
+			 flex-wrap: wrap; 
+			 justify-content: space-around; }
+
+nav a {text-decoration: none; }
+nav a:link { color: #ADD8E6 }
+nav a:visited { color: #800000; }
+nav a:hover { color: orange; }
+
+
+h1 { font-size: 250%;
+	 text-shadow: 10px 10px 10px #000000; }
+
+main { background-color: #b5e7a0;
+	   padding-left: 5px;}
+
+aside { display: none; }
+
+footer { background-color: #bdcebe;
+		 text-align: center;
+		 font-style: italic; }
+		 
+/* Media Query */
+		  
+@media (min-width: 38em) {
+	#wrapper { display: grid; 
+			   grid-template:
+				"header		header"
+				"nav		nav"
+				"main		aside"
+				"footer		footer"
+				/65%		35% }
+		 
+	#navPic { display: none; }
+	
+	aside { display: block;
+			background-color: #86af49;
+			text-align: center; }
+
+}
+
+@media (min-width: 65em) {
+	#wrapper { display: grid;
+			   grid-template:
+				"header		header		header" 100px
+				"nav		main		aside" auto
+				"footer		footer		footer" 50px
+				/ 200px		1fr			300px; }
+header { text-align: center;
+		 background-color: #d5e1df;
+		 background-image: url(ColorfulSpiral.jpg);
+		 background-repeat: no-repeat;
+		 background-size: 200px 95px; }
+		 
+nav ul { list-style-type: square; 
+		 display: flex;
+		 flex-direction: column;
+		 flex-wrap: nowrap; }
+
+nav li { text-align: left;
+		 margin-bottom: 1em; } 
+		 
+#navPic { display: block;
+		  position: absolute;
+		  height: 110px;
+		  width: 185px; 
+		  margin-top: 2775px;
+		  margin-left: 7px;}
+		  
+aside { background-color: #86af49;
+		text-align: center; }
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+	<header>
+		<h1>Eight Favorite Pictures</h1>
+	</header>
+	<nav>
+	 <ul>
+		<li><a href="#memes">Memes</a></li>
+		<li><a href="#coolPics">Cool Pics</a></li>
+		<li><a href="#RickRoll">Rick Roll</a></li>
+	 </ul>
+	 <img id="navPic" src="RainbowAstronaut.jpg" alt="Astronaut holding rainbows">
+	</nav>
+	
+	<main>
+	<section id="memes">
+		<h2>Pickle Rick</h2>
+		<p>Pickle Rick is a pretty great joke since he just turns himself into a pickle in the TV show</p>
+		<img src="PickleRick.jpg" alt="Pickle Rick" width="150px" height="250px">
+		
+		<h2>Character development from a cat</h2>
+		<p>Rarely happens with outside cats and especially mother cats so this is impressive</p>
+		<img src="CharDevelopment.png" alt="Among us" width="400px" height="275px">
+		
+		<h2>Gorilla playing a saxophone</h2>
+		<p>I really hope that this is real because that would be something I'd watch</p>
+		<img src="GorillaSaxophone.png" alt="Gorilla Playing Saxophone(with balloons)" width="280px" height="300px">
+		
+		<h2>Seasoning the pigeons</h2>
+		<p>I really wonder why they started to season them in the first place...<p>
+		<img src="DontSeasonPigeons.png" alt="Seasoning the pigeons" width="200px" height="250px">
+		
+		<h2>Let me talk about god real quick...</h2>
+		<p>I don't really know why a talking shark has anything to do with god.</p>
+		<img src="SharkGod.jpg" alt="God Shark Thing?" width="390px" height="350px">
+	</section>
+	
+	<section id="coolPics">
+		<h2>Lion wearing colorful sunglasses</h2>
+		<p>This picture looks pretty cool which is why I love it<p>
+		<img src="LionSunglasses.jpg" alt="Rainbow Shark" width="260px" height="270px">
+		
+		<h2>Cool Sunset</h2>
+		<p>This is a pretty cool looking sunset</p>
+		<img src="Sunset.jpg" alt="Sunset" width="500px" height="270px">
+	</section>	
+		
+	<section id="RickRoll">	
+		<h2>Sending this picture to friends</h2>
+		<p>I honestly like to see the reaction from my friends when I send this</p>
+		<img src="RickRollFriends.jpg" alt="God Shark" width="390px" height="270px">
+	</section>
+	</main>
+	
+	<aside>
+		<h3>Some images and one tip</h3>
+		<h4>I know it said to put eight pictures and I decided to put some jokes so I hope<br> that's okay</h4>
+		<img class="asideImg" src="monkeySunglass.jpg" alt="Cool monkey" width="250px" height="350px">
+	</aside>
+	
+	<footer>
+		<p>estefan@valencia.com</p>
+	</footer>
+</div>
+</body>
+</html>
