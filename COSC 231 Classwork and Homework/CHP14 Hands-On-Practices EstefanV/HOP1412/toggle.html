@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Image Gallery</title>
+<meta charset="utf-8">
+<style>
+body { background-color: #333333;
+		color: #EAEAEA; }
+		
+#gallery { width: 800px; }
+
+#gallery ul { width: 300px;
+			  list-style-type: none;
+			  float: left; }
+#gallery li { display: inline;
+			  float: left;
+			  padding: 16px; }
+#gallery img { border-style: none; }
+
+figure { padding-top: 30px;
+		 text-align: center; }
+
+figcaption { font-weight: bold;
+			 font-size: 1.5em; }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function() {
+
+	$('#gallery a').click(function() {
+		var galleryHref = $(this).attr('href');
+		var galleryAlt = $(this).attr('title');
+		$('figure').css('display','none');
+		$('figure img').attr({ src: galleryHref, alt: galleryAlt });
+			$('figcaption').html(galleryAlt);
+		$('figure').fadeToggle(1000);
+		return false;
+	});
+
+});
+</script>
+</head>
+<body>
+<h1>Image Gallery</h1>
+<div id="gallery">
+<ul>
+	<li><a href="photo1.jpg" title="Golden Gate Bridge"><img src="photo1thumb.jpg" width="100" height="75" alt="Golden Gate Bridge"></a>
+	<li><a href="photo2.jpg" title="Rocky Beach"><img src="photo2thumb.jpg" width="100" height="75" alt="Rocky Beach"></a>
+	<li><a href="photo3.jpg" title="Mountain Beach"><img src="photo3thumb.jpg" width="100" height="75" alt="Mountain Beach"></a>
+	<li><a href="photo4.jpg" title="Small Dock"><img src="photo4thumb.jpg" width="100" height="75" alt="Small Dock"></a>
+	<li><a href="photo5.jpg" title="Steep Cliff by Water"><img src="photo5thumb.jpg" width="100" height="75" alt="Steep Cliff By Water"></a>
+	<li><a href="photo6.jpg" title="Cool Sunset"><img src="photo6thumb.jpg" width="100" height="75" alt="Cool Sunset"></a>
+</ul>
+<figure>
+	<img src="photo1.jpg" alt="Golden Gate Bridge">
+	<figcaption>Golden Gate Bridge</figcaption>
+</figure>
+</div>
+
+</body>
+</html>
